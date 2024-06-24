@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 var logger = require('../helper/logger')
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://harshitj:root@splitwise-cluster-1.nfcfqaq.mongodb.net/?retryWrites=true&w=majority&appName=splitwise-cluster-1', 
+mongoose.connect(process.env.MONGODB_URI, 
 //     {
 //     maxPoolSize: 50,
 //     wtimeoutMS: 2500,
