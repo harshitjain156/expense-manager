@@ -62,6 +62,7 @@ exports.userLogin = async (req, res) => {
         const user = await model.User.findOne({
             emailId: req.body.emailId
         })
+        console.log(user)
         if (!user) {
             var err = new Error("Invalid email Id or Password !")
             err.status = 401
@@ -83,7 +84,7 @@ exports.userLogin = async (req, res) => {
                 emailId: user.emailId,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                accessToken
+                accessToken:accessToken
             })
         }
     } catch (err) {
